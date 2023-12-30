@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Helping English | Index</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/Helping-English.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+      <img
+        src="./assets/images/Helping-English.gif"
+        alt="Loading"
+        style="width: 100%; height: 100%"
+      />
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <h1 id="super-heading">Helping English</h1>
+
+      <div class="flexbox-1">
+        <div class="block">
+          <h1 id="introduction">Introduction</h1>
+          <p id="introductionP">Hi, I'm a person.</p>
+        </div>
+        <div class="block">
+          <h1 id="motivation">Motivation</h1>
+          <p id="motivationP">
+            One reason why I am making this website is so that it's easier to
+            connect my ideas together.
+            <br />
+            <br />
+            A second reason is because I have friends who have lovely ambitions,
+            yet who find it challenging to stay focused on achieving those
+            ambitions:
+            <br />
+            ~
+            <br />
+            I want to help support them however I can, to support them with
+            projects they might feel hesitant to start.
+          </p>
+        </div>
+        <div class="block">
+          <h1 id="gratitude">Gratitude</h1>
+          <p id="gratitudeP">
+            I am grateful for the friends I have made. Be it learning a
+            language, an art or a craft, a science or a philosophy, I appreciate
+            the inspiration you give!
+            <br>
+            <br>
+            Unless I hate you, then thank you: you are
+            awesome.
+          </p>
+        </div>
+        <div class="block">
+          <h1 id="schedule">Schedule</h1>
+          <p id="scheduleP">
+            Friday | 23:00-00:00
+            <br />
+            Saturday | 12:00-13:00
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simulate a 5-second delay
+      setTimeout(() => {
+        // Hide the loading screen after the delay
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.classList.add("hidden");
+      }, 2000);
+    </script>
+  </body>
+</html>

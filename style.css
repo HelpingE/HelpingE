@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END !SECTION RESET */
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 62.5%;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.4em;
+  cursor: help;
+}
+
+p {
+  font-size: 1.7em;
+  display: none;
+  word-wrap: break-word;
+  width: 15em;
+  text-align: center;
+}
+
+.flexbox-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexbox-1 h1 {
+  /* border: 2px solid red; */
+}
+
+#super-heading {
+  font-size: 3em;
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+.block {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.fade-in {
+  /* opacity: 0; */
+  animation: fadeIn 1s ease-in-out; /* You can adjust the duration and easing function */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  object-fit: contain;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Add some simple styling for the loading screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Hide loading screen after transition */
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events to allow interaction with underlying elements */
+}
+
+/* Content */
+body {
+  background: url("./assets/images/Helping-English.gif") no-repeat center
+    center fixed;
+  background-size: cover;
+  margin: 0; /* Remove default body margin */
+}
+
+#content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: rgba(
+    72,
+    102,
+    128,
+    0.8
+  ); /* Add a semi-transparent white background for readability */
+  padding: 20px; /* Add padding to the content for better readability */
+}
+
+/* Show content after loading screen transition */
+#loading-screen.hidden + #content {
+  opacity: 1;
+}
